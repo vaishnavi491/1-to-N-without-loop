@@ -1,0 +1,8 @@
+# You are given an integer ‘n’.Your task is to return an array containing integers from 1 to ‘n’ (in increasing order) without using loops.
+vector<int> printNos(int x) {
+   if(x == 0) return {};
+
+    vector<int> ans = printNos(x - 1);
+    ans.push_back(x);
+    return ans;
+}
